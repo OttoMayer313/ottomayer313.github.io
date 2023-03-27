@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="graphics project">
+    <meta name="author" content="Otto Mayer">
+
+    <title>CSE 457 - My Computer Graphics Projects</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/portfolio-item.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- My personal custom CSS -->
+    <!-- <link href="css/main.css" rel="stylesheet"> -->
+    <link href="css/graphicsProject.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+     <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- graphicsProject JavaScript -->
+    <!-- // <script src="js/graphicsProject.js"></script> -->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Otto Mayer</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="http://ottomayer313.github.io/index.html#about">About</a>
+                    </li>
+                    <li>
+                        <a href="http://ottomayer313.github.io/index.html#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="http://ottomayer313.github.io/index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Portfolio Item Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Computer Graphics
+                    <small>3-d Modeling &amp; Animation projects</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Portfolio Item Row -->
+        <div class="row">
+
+            <div id="videoDiv" class="col-md-8">
+                <span id="fluidWidth" class="img-responsive">
+                    <!-- <img class="img-responsive" src="http://placehold.it/750x500" alt=""> -->
+                    <!-- <iframe id="projectVideo" width="750" height="500" src="https://www.youtube.com/embed/RIUvcP1W2C0?autoplay=1&rel=0&loop=1&playlist=RIUvcP1W2C0" frameborder="0" allowfullscreen></iframe> -->
+
+                    <!-- The following div & script is completely asinine, just to be able to also mute video playback on loading instead of the single iframe declaration above.
+                    I hate having JS mixed in here -->
+
+                    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+                    <div id="player"></div>
+                    
+                    <script>
+                        var $parent = $("#videoDiv");
+                        
+                        // default width & height for aspect ratio, used for resizing player
+                        var videoWidth  = 750;
+                        var videoHeight = 500;
+                        var aspectRatio = videoHeight / videoWidth;
+
+                        // 2. This code loads the IFrame Player API code asynchronously.
+                        var tag = document.createElement('script');
+
+                        tag.src = "https://www.youtube.com/iframe_api";
+                        var firstScriptTag = document.getElementsByTagName('script')[0];
+                        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                        // 3. This function creates an <iframe> (and YouTube player)
+                        //    after the API code downloads.
+                        var player;
+                        function onYouTubeIframeAPIReady() {
+                            player = new YT.Player('player', {
+                                videoId: 'RIUvcP1W2C0', // YouTube Video ID
+                                width:  videoWidth,     // Player width (in px)
+                                height: videoHeight,    // Player height (in px)
+                                playerVars: {
+                                    autohide: 1,        // Hide video controls when playing
+                                    autoplay: 1,        // Auto-play the video on load
+                                    controls: 1,        // Show pause/play buttons in player
+                                    iv_load_policy: 3,  // Hide the Video Annotations
+                                    loop: 1,            // Run the video in a loop
+                                    modestbranding: 0,  // Hide the Youtube Logo
+                                    playlist: "RIUvcP1W2C0", // needed currently for playback looping
+                                    showinfo: 0         // Hide the video title
+                                },
+                                events: {
+                                    'onReady': onPlayerReady
+                                }
+                            });
+                        }
+
+                        // 4. The API will call this function when the video player is ready.
+                        function onPlayerReady(event) {
+                            resizePlayerToFit();
+                            event.target.mute();
+                        }
+
+                        $(window).resize(resizePlayerToFit);
+
+                        function resizePlayerToFit() {
+                            var parentWidth  = $parent.width();
+                            player.setSize(parentWidth, parentWidth * aspectRatio);
+                        }
+
+                    </script>
+                </span>
+
+                <div class="about-project col-lg-12">
+                    <h3>About our work</h3>
+                    <p>For the modeler project requirements I designed and configured the humanoid hierarchical model while Rocne worked on designing shaders.  We both worked together on programming the surface of revolution calculations.  I created the Cartoon and Thermal shaders based on his shader work.  After we met the project requirements we both worked together trying to come up with extra bells and whistles, the "trippy" shader being one of the results from that.</p>
+                    <p>I enjoyed making both the model and the cartoon shader.  Hierarchical modeling was presented to us as simple scale-rotate-translate (in that order) actions when in reality they can happen in any order, as I learned while creating our model.  The problem I was having was with body parts or limbs being stretched or "skewed" as they were being moved around.  For my work creating a <a href="https://en.wikipedia.org/wiki/Cel_shading">"cartoon" shader</a>, my research led me to several processes used to achieve it, but none worked well for me since I didn't quite understand the openGL pixel pipelines yet.  I created our cartoon affect by using the camera's vector from the surface crossed with the surface normal and if it was within a threshold of perpendicular (i.e. the edge of a model) the pixels would be colored black.  All other surface pixels would be shaded a certain intensity of the material color also based on the angle between surface normal and viewer.  It was a cheap and easy solution that really only has one drawback, large flat surfaces which cause the entire surface to become a solid color from having uniform surface normal and viewer vectors.</p>
+                    <p>We again split the workload on the animator project with Rocne implementing the particle system and myself tackling the animation curves implementation and collision handling.  We met back in the middle and I implemented attaching particle systems to our scene models and we began playing with the curve editor and animating basic scenes to familiarize ourselves for the final animation artifact.  During our entire process, Rocne and I collaborated closely together to ensure ideas we had for this project from earlier in the quarter would work with each other's parts.  We designed a particle system that could be easily extended to include particles of just about any shape, size, and combination of forces.  Our simple forces included, gravity, wind, heat, and a special "orbit" force, and we created classes of particles such as precipitate, collidable, and floating.  All together, our final animation artifact used five or six particle systems of varying combinations of types.</p>
+                    <p>It was during our work in the modeler project that we started conceiving our animated short.  After we were able to draw simple shapes using a surface of revolution and Rocne created the "trippy" shader, everything else fell into place.  I spent about a day storyboarding our animation and we both spent another day rendering scenes, adding sound, and stitching everything together.  This computer graphics class has been one of my favorite and more fulfilling classes mostly because not only did we get the freedom to create something completely from our minds, but we also got to bring it to life.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h3><a href="https://courses.cs.washington.edu/courses/cse457/15au/src/modeler/modeler.php">Modeler Project</a></h3>
+                <p>Modeler is a program that views a 3d hierarchical model, and lets you manipulate joint angles, allows you to load different shaders to shade the 3d model, and manipulate the lighting conditions. Modeler is the basis for the Animator program in Project 4, which just extends the functionality of it.</p>
+                <!-- <h4>Project Details</h4> -->
+
+                Implements the following:
+                <ul>
+                    <li>Surface of Revolution</li>
+                    <li>The Hierarchical Model</li>
+                    <li>Blinn-Phong Point Light Shader</li>
+                    <li>Our Additional Shaders
+                        <ul>
+                            <li>Cartoon</li>
+                            <li>RGB</li>
+                            <li>Thermal</li>
+                            <li>Trippy</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <a href="http://courses.cs.washington.edu/courses/cse457/15au/projects/modeler/artifacts/">
+                <span class="fa-stack fa-lg">
+                    <!-- <i class="fa fa-circle-thin fa-stack-2x"></i> -->
+                    <i class="fa fa-trophy fa-stack-2x"></i>
+                </span>
+                First place artifact winner!</a>
+
+            </div>
+
+            <div class="col-md-4">
+                <h3><a href="https://courses.cs.washington.edu/courses/cse457/15au/src/animator/animator.php">Animator Project</a></h3>
+                <p>Animator is a program that extends the functionality of the Modeler project.  It extends a spline-based animation system to support multiple curve types, and implements a particle system simulation engine.</p>
+                <!-- <h3>Project Details</h3> -->
+               
+                Implements the following curve types:
+                <ul>
+                    <li>Bezier (cubic beziers splined together with C<sup>0</sup> continuity)</li>
+                    <li>Catmull-Rom (with endpoint interpolation)</li>
+                    <li>B-spline (with endpoint interpolation)</li>
+                </ul>
+                
+                Implements a particle system that:
+                <ul>
+                    <li>is attached to a node of your hierarchy other than the root node</li>
+                    <li>has two distinct forces acting on the particles</li>
+                    <li>solves the system of forces using Euler's method</li>
+                    <li>includes collision detection and response for <strong>both</strong> the sphere in the scene and another primitive of your choice (such as the ground plane)</li>
+                    <li>provides control of the restitution constant (e.g a slider)</li>
+                </ul>
+
+                <a href="http://courses.cs.washington.edu/courses/cse457/15au/projects/animator/artifacts/">
+                <span class="fa-stack fa-lg">
+                    <!-- <i class="fa fa-circle-thin fa-stack-2x"></i> -->
+                    <i class="fa fa-trophy fa-stack-2x"></i>
+                </span>
+                First place artifact winner!</a>
+
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <!-- Related Projects Row -->
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h3 class="page-header">Project Images</h3>
+            </div>
+
+            <div class="col-sm-4 col-xs-6">
+                <a href="img/graphics project/surface-of-revolution.png">
+                    <img class="img-responsive portfolio-item" src="img/graphics project/surface-of-revolution.png" alt="surfce of revolution">
+                </a>
+            </div>
+
+            <div class="col-sm-4 col-xs-6">
+                <a href="img/graphics project/cartoon-shader.png">
+                    <img class="img-responsive portfolio-item" src="img/graphics project/cartoon-shader.png" alt="cartoon shader">
+                </a>
+            </div>
+
+            <div class="col-sm-4 col-xs-6">
+                <a href="img/graphics project/thermal-shader.png">
+                    <img class="img-responsive portfolio-item" src="img/graphics project/thermal-shader.png" alt="thermal shader">
+                </a>
+            </div>
+
+            <div class="col-sm-4 col-xs-6">
+                <a href="img/graphics project/hierarchical-model.png">
+                    <img class="img-responsive portfolio-item" src="img/graphics project/hierarchical-model.png" alt="hierarchical model">
+                </a>
+            </div>
+
+            <div class="col-sm-4 col-xs-6">
+                <a href="img/graphics project/eat-mushroom.png">
+                    <img class="img-responsive portfolio-item" src="img/graphics project/eat-mushroom.png" alt="animation curves">
+                </a>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Otto Mayer 20</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+   
+
+</body>
+
+</html>

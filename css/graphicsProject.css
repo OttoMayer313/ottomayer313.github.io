@@ -1,0 +1,16 @@
+/*
+Copyright 2016 Otto Mayer, All rights reserved.
+Licensed under GNU GPL (https://www.gnu.org/licenses/licenses.html).
+*/
+
+
+
+.fa-trophy {
+    color: gold;
+}
+
+.about-project p {
+    font-size: 12pt;
+    text-align: justify;
+    text-indent: 2em;
+}

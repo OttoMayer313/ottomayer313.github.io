@@ -1,0 +1,125 @@
+/*
+Copyright 2016 Otto Mayer, All rights reserved.
+Licensed under GNU GPL (https://www.gnu.org/licenses/licenses.html).
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500);
+
+.aboutMe {
+    text-align: justify;
+}
+
+.terminal {
+    height: auto;
+    min-height: 800px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 20px 70px;
+    overflow: hidden;
+    margin: 10px auto;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.terminal-header {
+    background: silver;
+    background: -webkit-linear-gradient(GhostWhite 0%, silver 50%, gray 100%); 
+    background: -o-linear-gradient(GhostWhite 0%, silver 50%, gray 100%);
+    background: -moz-linear-gradient(GhostWhite 0%, silver 50%, gray 100%);
+    background: linear-gradient(GhostWhite 0%, silver 50%, gray 100%);
+
+    color: black;
+    text-align: center;
+}
+
+.terminal-window {
+    padding: 20px;
+}
+
+/* For type.js scripting */
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.header {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../img/bg4-1.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.intro {
+    background: rgba(255,255,255,0.6);
+    padding: 2em;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 768px) {
+    .intro {
+        border-radius: 2em;
+        border: 1px solid rgba(0,0,0,0.4);
+        width: 550px;
+    }
+}
+@media (min-width: 992px) {
+    .intro {
+        width: 770px;
+    }
+}
+@media (min-width: 1200px) {
+    .intro {
+        width: 970px;
+    }
+}
+
+.img-portrait {
+    border: 10px solid rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+}
+
+.portfolio {
+    background: silver;
+    background: -webkit-linear-gradient(right, gray 0%, silver 10%, GhostWhite 30%, GhostWhite 70%, silver 90%, gray 100%); 
+    background: -o-linear-gradient(right, gray 0%, silver 10%, GhostWhite 30%, GhostWhite 70%, silver 90%, gray 100%);
+    background: -moz-linear-gradient(right, gray 0%, silver 10%, GhostWhite 30%, GhostWhite 70%, silver 90%, gray 100%);
+    background: linear-gradient(to right, gray 0%, silver 10%, GhostWhite 30%, GhostWhite 70%, silver 90%, gray 100%);
+}
+
+.portfolio-text {
+    padding: 0px 0.5em;
+}
+
+.outline {
+    border: 0.5px solid transparent;
+}
+
+.outline:hover {
+    border: 0.5px solid rgba(0, 0, 0, 0.25);
+}
