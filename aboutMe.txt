@@ -1,24 +1,24 @@
-- A Full Stack Project Manager with in-depth knowledge of planning project, installing DevOps, managing source and building projects.
-- A Passionate Senior Software Developer with +10 years of experience in requirement gathering, designing, developing, implementing, debugging, testing, deployment of software applications using mobile, web and blockchain technologies.
-- A Online Casino Software Architect with a full skill of building communication infra of online providers and implementing their API integration.
+ - A senior full stack developer with +8 years of experience in requirement gathering, designing, developing, implementing, debugging, testing, deployment of software applications using mobile, web and blockchain technologies.
+ - A resourceful blockchain architect with 4 years of experience in software engineering, and with extensive knowledge in smart contracts, consensus algorithms and data structures.
+ - A crypto casino development expert with a full skill of building network communication infra of online providers and implementing their API integration.
 
 PERSONAL INFORMATION
   Address: Scharnweberstrasse 57, Seligenstadt, 63500
-  Date of birth: 1992-3-13 Frankfurt am Main
+  Date/Place of birth: 1992/3/13 Frankfurt am Main
   Nationality: Austrian
   Driving License: 867125786 - issued in Hessen on 06/09/2017,  expires 07/10/2026
-  Hobbies: Playing chess, Playing billard
+  Hobbies: Skiing / Cycling / Hiking
 
 WORK EXPERIENCE
-  August 2019 – November 2021
-  /Senior Full Stack Developer at Thinkport GmbH, Seligenstadt
-  July 2014 – August 2019
-  /Software Developer at Thinkport GmbH, Frankfurt am Main
+  * August 2020 – November 2022
+    Senior Full Stack Developer at Thinkport GmbH, Seligenstadt
+  * July 2018 – August 2020
+    Blockchain Developer at Thinkport GmbH, Frankfurt am Main
+  * October 2015 – July 2018
+    Web & Mobile App Developer at Lazy Ants, Frankfurt am Main
 
 EDUCATION
-  September 2012 – September 2014
-  /University of Applied Science, Frankfurt am Main B.Sc
-  March 2011 – September 2012
-  /University of Applied Science, Frankfurt am Main M.Eng
-  April 1999 – February 2011
-  /Phorms Bilingual School , Frankfurt am Main 
+  * September 2011 – August 2015
+    Frankfurt University of Applied Science, Frankfurt am Main B.Sc.(Computer Science)
+  * April 1999 – February 2011
+    Phorms Bilingual School , Frankfurt am Main 
