@@ -2,14 +2,14 @@
  - A resourceful blockchain architect with 4 years of experience in software engineering, and with extensive knowledge in smart contracts, consensus algorithms and data structures.
  - A crypto casino development expert with a full skill of building network communication infra of online providers and implementing their API integration.
 
-PERSONAL INFORMATION
+<PERSONAL INFORMATION>
   Address: Scharnweberstrasse 57, Seligenstadt, 63500
   Date/Place of birth: 1992/3/13 Frankfurt am Main
   Nationality: Austrian
   Driving License: 867125786 - issued in Hessen on 06/09/2017,  expires 07/10/2026
   Hobbies: Skiing / Cycling / Hiking
 
-WORK EXPERIENCE
+<WORK EXPERIENCE>
   * August 2020 – November 2022
     Senior Full Stack Developer at Thinkport GmbH, Seligenstadt
   * July 2018 – August 2020
@@ -17,7 +17,7 @@ WORK EXPERIENCE
   * October 2015 – July 2018
     Web & Mobile App Developer at Lazy Ants, Frankfurt am Main
 
-EDUCATION
+<EDUCATION>
   * September 2011 – August 2015
     Frankfurt University of Applied Science, Frankfurt am Main B.Sc.(Computer Science)
   * April 1999 – February 2011

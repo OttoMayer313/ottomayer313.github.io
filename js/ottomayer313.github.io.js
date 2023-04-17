@@ -28,7 +28,7 @@ Licensed under GNU GPL (https://www.gnu.org/licenses/licenses.html).
 
     var text;
     var outputedToConsole = false;
-    var commands = ["Who am I?", "I'm a passionate full stack developer with a full knowledge in frontend & backend development but also blockchain and cloud computing.", "cat " + ABOUTME];
+    var commands = ["whoami", "otto mayer", "cat " + ABOUTME];
 
     // var keySound1;
 
