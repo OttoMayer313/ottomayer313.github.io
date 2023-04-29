@@ -212,6 +212,7 @@ hr.small {
     width: auto;
     object-fit: cover;
     margin: 0 auto 15px;
+    border-radius: 10px;
 }
 
 .img-portfolio:hover {
